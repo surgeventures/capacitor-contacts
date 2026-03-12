@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 
 @CapacitorPlugin(
     name = "Contacts",
-    permissions = { @Permission(strings = { Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS }, alias = "contacts") }
+    permissions = { @Permission(strings = { Manifest.permission.READ_CONTACTS }, alias = "contacts") }
 )
 public class ContactsPlugin extends Plugin {
 
