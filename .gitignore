@@ -62,3 +62,5 @@ captures
 
 #local secrets
 .env
+
+.github/actions.lock.yaml

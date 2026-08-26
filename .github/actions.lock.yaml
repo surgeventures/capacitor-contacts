@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-06-15T13:14:31Z
+generated_at: 2026-08-21T11:49:52Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -7,21 +7,6 @@ trusted:
       - 93cb6efe18208431cddfb8368fd83d5badbf9bfd
     occurrences:
       93cb6efe18208431cddfb8368fd83d5badbf9bfd:
-        .github/workflows/ci.yml:
-          - jobs.build.steps.[0].uses
-          - jobs.lint.steps.[0].uses
-  - action: actions/setup-java
-    refs:
-      - be666c2fcd27ec809703dec50e508c2fdc7f6654
-    occurrences:
-      be666c2fcd27ec809703dec50e508c2fdc7f6654:
-        .github/workflows/ci.yml:
-          - jobs.build.steps.[2].uses
-  - action: actions/setup-node
-    refs:
-      - 48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
-    occurrences:
-      48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e:
         .github/workflows/ci.yml:
           - jobs.build.steps.[1].uses
           - jobs.lint.steps.[1].uses
@@ -32,7 +17,24 @@ trusted:
       b7c566a772e6b6bfb58ed0dc250532a479d7789f:
         .github/workflows/ci.yml:
           - jobs.build.steps.[7].uses
-external: []
+external:
+  - action: step-security/harden-runner
+    refs:
+      - 9af89fc71515a100421586dfdb3dc9c984fbf411
+    occurrences:
+      9af89fc71515a100421586dfdb3dc9c984fbf411:
+        .github/workflows/ci.yml:
+          - jobs.build.steps.[0].uses
+          - jobs.lint.steps.[0].uses
+  - action: step-security/mise-action
+    refs:
+      - 2796166110dee826668caddd4bffedae5116e7cd
+    occurrences:
+      2796166110dee826668caddd4bffedae5116e7cd:
+        .github/workflows/ci.yml:
+          - jobs.build.steps.[2].uses
+          - jobs.lint.steps.[2].uses
 local: []
 docker: []
 dynamic: []
+nested_floating_deps: []
